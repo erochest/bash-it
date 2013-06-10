@@ -15,3 +15,5 @@ alias pd='/usr/local/bin/pass'
 alias f.='find .'
 alias fn='find . -name'
 
+alias pom='pomodoro'
+
