@@ -1,4 +1,4 @@
 
-export ANDROID_SDK_HOME=$HOME/src/android-sdk-mac_x86
-alias androidenv="PATH=$PATH:$ANDROID_SDK_HOME/tools:$ANDROID_SDK_HOME/platform-tools"
+export ANDROID_HOME=/usr/local/opt/android-sdk
+alias androidenv="PATH=$ANDROID_HOME/bin:$ANDROID_HOME/tools:$PATH"
 
