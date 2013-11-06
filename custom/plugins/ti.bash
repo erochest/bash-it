@@ -23,3 +23,15 @@ tonn() {
 	ti note "$@"
 }
 
+ti-plugin() {
+	echo "function ti-switch (ti fin + ti on)"
+	echo "function tont      (ti on  + ti tag)"
+	echo "function tonn      (ti on  + ti note)"
+	echo "ton  = ti on"
+	echo "tif  = ti fin"
+	echo "tis  = ti status"
+	echo "tig  = ti tag"
+	echo "tisw = ti-switch"
+	echo "tin  = ti note"
+}
+
