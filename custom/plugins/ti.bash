@@ -23,6 +23,8 @@ tonn() {
 	ti note "$@"
 }
 
+alias dailyreview='tont "daily review" gtd email'
+
 ti-plugin() {
 	echo "function ti-switch (ti fin + ti on)"
 	echo "function tont      (ti on  + ti tag)"
@@ -33,5 +35,6 @@ ti-plugin() {
 	echo "tig  = ti tag"
 	echo "tisw = ti-switch"
 	echo "tin  = ti note"
+	echo "dailyreview"
 }
 
