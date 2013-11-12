@@ -52,6 +52,14 @@ alias gup='git fetch && git rebase'
 alias gout='git log --branches --not --remotes'
 alias gx='git annex'
 
+# From http://stackoverflow.com/a/12059200/34864
+function clone() {
+	url=$1
+	reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//' )
+	git clone $url $reponame
+	cd $reponame
+}
+
 function git-help() {
 	alias | grep -w git | sort
 }
