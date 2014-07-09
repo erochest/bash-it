@@ -12,3 +12,13 @@ alias yi='yesod init'
 alias yc='yesod configure'
 alias yd='yesod devel'
 
+function ls-haddock() {
+	pkg="$1"
+	find .cabal-sandbox -name index.html | grep "$pkg"
+}
+
+function open-haddock() {
+	pkg="$1"
+	find .cabal-sandbox -name index.html | grep "$pkg" | head -1 | xargs open
+}
+
