@@ -19,6 +19,7 @@ function ls-haddock() {
 
 function open-haddock() {
 	pkg="$1"
-	find .cabal-sandbox -name index.html | grep "$pkg" | head -1 | xargs open
+	haddock_dir=$(cabal sandbox hc-pkg field $pkg haddock-html | sed -e 's/haddock-html: //')
+	open "$haddock_dir/index.html"
 }
 
