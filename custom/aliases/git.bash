@@ -60,6 +60,11 @@ function clone() {
 	cd $reponame
 }
 
+function g-cp-remote() {
+	remote=${1:-origin}
+	git remote -v | grep $remote | cut -d ' ' -f 1 | sed -e 's/^origin[[:space:]]*//' | head -1 | pbcopy
+}
+
 function git-help() {
 	alias | grep -w git | sort
 }
