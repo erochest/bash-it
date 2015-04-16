@@ -16,4 +16,5 @@ alias f.='find .'
 alias fn='find . -name'
 
 alias pom='pomodoro'
+alias cpwd='pwd | pbcopy'
 
