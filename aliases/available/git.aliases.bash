@@ -12,6 +12,7 @@ alias get='git'
 alias gst='git status'
 alias gs='git status'
 alias gss='git status -s'
+alias gsu='git submodule update --init --recursive'
 alias gl='git pull'
 alias gpr='git pull --rebase'
 alias gpp='git pull && git push'
@@ -36,6 +37,24 @@ alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias ggs="gg --stat"
 alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gtl="git tag -l"
+# From http://blogs.atlassian.com/2014/10/advanced-git-aliases/
+# Show commits since last pull
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+# Add uncommitted and unstaged changes to the last commit
+alias gcaa="git commit -a --amend -C HEAD"
+
+case $OSTYPE in
+  darwin*)
+    alias gtls="git tag -l | gsort -V"
+    ;;
+  *)
+    alias gtls='git tag -l | sort -V'
+    ;;
+esac
 
 if [ -z "$EDITOR" ]; then
     case $OSTYPE in
